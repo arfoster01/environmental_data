@@ -1,0 +1,8 @@
+install.packages("rmarkdown")
+---
+title: "R Markdown Documents - Part 1"
+subtitle: 'Analysis of Environmental Data'
+author:
+  Abby Foster
+output: html_document
+---

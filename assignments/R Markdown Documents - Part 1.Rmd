@@ -1,0 +1,38 @@
+---
+title: "R Markdown Documents - Part 1"
+subtitle: "Analysis of Environmental Data"
+author: "Abby Foster"
+date: "2022-09-25"
+output: 
+  html_document:
+    toc: TRUE
+    toc_float: TRUE
+    collapsed: TRUE
+    smooth_scroll: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+**Abby Foster**
+
+*Environmental Conservation*
+
+*Wildlife, Fish and Conservation Biology*
+
+## Concepts List
+1.Basic R
+
+2.Analyzing Data
+
+3.Creating a Strong Hypothesis
+
+## Course List
+-Wildlife Conservation
+
+-Fish Conservation & Management
+
+-Wildlife Habitat Mgt
+

@@ -1,0 +1,12 @@
+---
+title: "Abby's Project Homepage"
+author: "Abby Foster"
+date: "2022-12-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Welcomes to Abby's Project Homepage

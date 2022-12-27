@@ -1,0 +1,84 @@
+---
+title: "final_R_reference"
+author: "Abby Foster"
+date: "2022-12-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Reference Guide {.tabset .tabset-pills}
+
+
+## Loading Data and Packages
+library("palmerpenguins")
+require(palmerpenguins)
+require(here)
+penguins
+
+ginkgo = data.frame(read.csv(here("data", "ginkgo_data_2021.csv")))
+
+## Data Structures
+num_vec  = c(1, 4, 8, 9, 13)
+char_vec = c("a", "fish", "data is cool")
+num_vec
+print(char_vec)
+
+num_vec_2= c(12, 67, 81, 99, 107, 156, 222)
+length(num_vec_2)
+
+matrix(num_vec_2)
+
+numbers= data.frame(num_vec_2)
+numbers
+
+nrow(ginkgo)
+ncol(ginkgo)
+dim(ginkgo)
+
+## Subsetting
+ginkgo_width = ginkgo$max_width
+ginkgo[1,]
+ginkgo[2,3]
+ginkgo[,3]
+
+dat_adelie = subset(penguins, species =="Adelie")
+
+## Numerical Data Exploration
+summary(dat_adelie)
+mean(dat_adelie$bill_length_mm, na.rm= TRUE)
+sd(dat_adelie$bill_depth_mm, na.rm= TRUE)
+
+## Graphical Data Exploration
+plot(max_depth ~ max_width, data= ginkgo, 
+  col= "red", pch= 16, cex= 0.8, main= "Ginkgo Leaf     Depth and Width", xlab= "Width", ylab= "Depth",
+  xlim= c(0, 150), ylim= c(0, 150))
+  
+hist(penguins$flipper_length_mm, 
+  breaks = "Sturges", xlab= "Flipper Length (mm)",
+  main= "Flipper Length")
+  
+boxplot(ginkgo$petiole_length, main= "Petiole Length")
+  
+boxplot(petiole_length ~ seeds_present, data= ginkgo,
+  xlab= "Seeds Present", ylab= "Petiole Length", main=     "Petiole Length Conditioned 
+  on Seeds Present")
+
+hist(penguins$flipper_length_mm, main= "Flipper Length", xlab= "Flipper Length (mm)")
+hist(penguins$bill_length_mm, main= "Bill Length", xlab= "Bill Length (mm)")
+hist(penguins$bill_depth_mm, main= "Bill Depth", xlab= "Bill Depth (mm)")
+hist(penguins$body_mass_g, main= "Body Mass", xlab= "Body Mass (g)")
+par(mfrow= c(2,2))
+
+## Distribution Functions
+x= 1:6
+
+dnorm(x)
+pnorm(x)
+qnorm(c(0.05, 0.95))
+
+dbinom(x, size= 5, prob= 0.66)
+pbinom(4, size = 6, prob = .67)
+qbinom(.30, size= 15, prob= 0.5)

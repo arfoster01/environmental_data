@@ -10,5 +10,3 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Welcomes to Abby's Project Homepage
-
-[Final Project: R Reference Guide](final_R_reference.html)
